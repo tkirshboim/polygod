@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">PolyGod</string>
+
+    <string name="hello">Hello!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_udp_receiver">UdpReceiver</string>
+
+    <string name="waiting_for_message">Waiting for message...</string>
+
+    <string name="about_activity">About</string>
+    <string name="version">PolyGod App - version %s</string>
+</resources>

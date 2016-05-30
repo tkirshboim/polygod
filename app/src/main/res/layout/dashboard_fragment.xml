@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:paddingLeft="16dp"
+    android:paddingTop="16dp"
+    android:paddingRight="16dp"
+    android:paddingBottom="8dp">
+
+    <RelativeLayout
+        android:id="@+id/server_toggle_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true">
+
+        <TextView
+            android:id="@+id/server_toggle_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:text="Server:"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_big" />
+
+        <Switch
+            android:id="@+id/server_switch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/server_toggle_text"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="right" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/status_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/server_toggle_container"
+        android:layout_marginTop="20dp">
+
+        <TextView
+            android:id="@+id/server_status_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:text="Status:"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_normal" />
+
+        <TextView
+            android:id="@+id/server_status"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:layout_toEndOf="@+id/server_status_text"
+            android:layout_toRightOf="@+id/server_status_text"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_normal" />
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/panic_button"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/log_container"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:text="SHEKET" />
+
+    <TextView
+        android:id="@+id/log_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/status_container"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="16dp"
+        android:text="Log:"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_normal" />
+
+    <FrameLayout
+        android:id="@+id/log_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/server_ip"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/log_title"
+        android:layout_marginBottom="12dp"
+        android:background="@color/dark_gray"
+        android:padding="2dp">
+
+        <TextView
+            android:id="@+id/server_log"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:scrollbarAlwaysDrawVerticalTrack="true"
+            android:scrollbars="vertical"
+            android:textColor="@color/black" />
+    </FrameLayout>
+
+
+    <TextView
+        android:id="@+id/server_ip_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/server_ip_button"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:text="Server Ip:"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_normal" />
+
+    <EditText
+        android:id="@+id/server_ip"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/server_ip_button"
+        android:layout_toLeftOf="@+id/server_ip_button"
+        android:layout_toRightOf="@+id/server_ip_text"
+        android:layout_toStartOf="@+id/server_ip_button"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_normal" />
+
+    <Button
+        android:id="@+id/server_ip_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/text_about"
+        android:layout_alignEnd="@+id/log_container"
+        android:layout_alignRight="@+id/log_container"
+        android:text="Set" />
+
+    <TextView
+        android:id="@+id/text_about"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:clickable="true"
+        android:onClick="aboutClicked"
+        android:text="About This App"
+        android:textColor="@color/light_gray"
+        android:textSize="@dimen/text_small" />
+
+
+</RelativeLayout>
